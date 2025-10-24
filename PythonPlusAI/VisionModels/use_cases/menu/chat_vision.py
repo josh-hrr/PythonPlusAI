@@ -1,9 +1,12 @@
 
+'''
+
+accessibility
+reading the menu
+Assistance for vision-impaired
 
 '''
 
-rb = read binary
-''' 
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
@@ -33,8 +36,16 @@ response = client.chat.completions.create(
         {
             "role": "user",
             "content": [
-                {"text": "are these alligators or crocodiles?", "type": "text"},
-                {"image_url": {"url": base64_encode_image("img/mystery_reptile.png")}, "type": "image_url"},
+                {
+                    "text": "I want an hamburger", 
+                    "type": "text"
+                },
+                {
+                    "image_url": {
+                            "url": base64_encode_image("img/menu.png")
+                            }, 
+                    "type": "image_url"
+                 },
             ],
         }
     ],
